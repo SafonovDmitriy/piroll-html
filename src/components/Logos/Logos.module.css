@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 25vh;
+}
+.container img {
+  padding: 15px 15px;
+  transform: scale(1.2);
+}

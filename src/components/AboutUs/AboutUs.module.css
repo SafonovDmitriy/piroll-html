@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container div {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container h3 {
+  font-size: 30px;
+}
+.container p {
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .container div {
+    flex-basis: 75%;
+  }
+  .container h3 {
+    font-size: 24px;
+  }
+  .container p {
+    font-size: 14px;
+  }
+}
+
+

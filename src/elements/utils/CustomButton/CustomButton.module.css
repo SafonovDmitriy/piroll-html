@@ -1,0 +1,22 @@
+.customButton {
+  background-color: #10c9c3;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 84px;
+  text-align: left;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  padding: 15px 25px;
+  border: none;
+ 
+}
+.customButton:hover {
+  background-color: black;
+  color: red;
+  transition: background-color 1s linear;
+}

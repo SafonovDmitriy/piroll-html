@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  background-color: #f5f5f5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}
+.container__header {
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 35%;
+}
+.container__form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+
+  flex-wrap: wrap;
+}
+x.inputBlock {
+  display: grid;
+  margin-bottom: 15px;
+}
+.container__form div:nth-child(1) x.inputBlock {
+  width: 45%;
+}
+.container__form div:nth-child(2) x.inputBlock {
+  width: 100%;
+}
+.container__form div:nth-child(2) x.inputBlock:nth-child(1),
+.container__form div:nth-child(2) x.inputBlock:nth-child(1) input,
+.container__form div:nth-child(1) input {
+  height: 5vh;
+}
+.container__form div:nth-child(2) x.inputBlock:nth-child(2),
+.container__form div:nth-child(2) x.inputBlock:nth-child(2) input {
+  height: 15vh;
+}
+.container__form div {
+  display: flex;
+}
+.container__form div:nth-child(1) {
+  justify-content: space-between;
+}
+
+.container__form div:nth-child(2) {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container__form div input {
+  text-align: left;
+  font-family: "Nunito Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.container__btn {
+  display: flex;
+  justify-content: center;
+}
+.container__btn button {
+  transform: scale(1.2);
+  margin: 3vh 0 8vh 0;
+}
+@media (max-width: 1000px) {
+  .container__form div:nth-child(1) x.inputBlock {
+    width: 100%;
+  }
+  .container__form div:nth-child(2) x.inputBlock {
+    margin-bottom: 10vh;
+  }
+  .container__form div {
+    align-items: center;
+    width: 100%;
+  }
+  .container__form input {
+    width: 80%;
+    padding: 10px;
+  }
+  .container__form div:nth-child(1) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .container__header {
+    width: 70%;
+  }
+  .container__form {
+    width: 80%;
+  }
+  .container__form input {
+    padding: 5px;
+  }
+  .container__btn button {
+    transform: scale(1);
+    padding: 10px 15px;
+  }
+}
