@@ -15,8 +15,8 @@ const Logos = () => {
   ];
   return (
     <div className={s.container}>
-      {logos.map(logo => {
-        return <img src={logo.src} alt={logo.alt} />;
+      {logos.map((logo, idx) => {
+        return <img key={`logo-${idx}`} src={logo.src} alt={logo.alt} />;
       })}
     </div>
   );

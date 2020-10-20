@@ -7,6 +7,7 @@ const SliderComponent = props => {
   return (
     <div className={s.container}>
       <CarouselProvider
+        key={`Slider`}
         className={s.container__slider}
         naturalSlideWidth={100}
         naturalSlideHeight={125}
@@ -19,14 +20,21 @@ const SliderComponent = props => {
         <Slider>
           {props.slides.map((slide, idx) => {
             return (
-              <Slide index={idx} className={s.navSlider__navItem}>
+              <Slide
+                key={`Slide-${idx}`}
+                index={idx}
+                className={s.navSlider__navItem}
+              >
                 <span className={s.slider__title}>
                   <TextBlockTitle title={props.slides[idx].title} />
                 </span>
                 <span className={s.slider__autor}>
-                  <TextBlockTitle title={props.slides[idx].autor} />
+                  <TextBlockTitle
+                    key={`Slide-${idx}`}
+                    title={props.slides[idx].autor}
+                  />
                 </span>
-                <DotGroup className={s.navSlider__navItem} />
+                <DotGroup key={`DotGroud`} className={s.navSlider__navItem} />
               </Slide>
             );
           })}

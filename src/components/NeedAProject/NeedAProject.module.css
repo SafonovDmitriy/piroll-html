@@ -20,23 +20,34 @@
 
   flex-wrap: wrap;
 }
-x.inputBlock {
+div.inputBlock {
   display: grid;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-.container__form div:nth-child(1) x.inputBlock {
-  width: 45%;
+
+.container__form div:nth-child(1) div {
+  flex-basis: 40%;
 }
-.container__form div:nth-child(2) x.inputBlock {
+.container__form div:nth-child(1) div input {
+  flex-basis: 100%;
+}
+.container__form div:nth-child(2) div.inputBlock {
   width: 100%;
 }
-.container__form div:nth-child(2) x.inputBlock:nth-child(1),
-.container__form div:nth-child(2) x.inputBlock:nth-child(1) input,
+
+.container__form div:nth-child(2) div.inputBlock:nth-child(1),
+.container__form div:nth-child(2) div.inputBlock:nth-child(1) input,
 .container__form div:nth-child(1) input {
-  height: 5vh;
+  min-height: 5vh;
 }
-.container__form div:nth-child(2) x.inputBlock:nth-child(2),
-.container__form div:nth-child(2) x.inputBlock:nth-child(2) input {
+.container__form div:nth-child(2) div.inputBlock:nth-child(1),
+.container__form div:nth-child(2) div.inputBlock:nth-child(1) input {
+  width: 100%;
+}
+.container__form div:nth-child(2) div.inputBlock:nth-child(2) {
+  height: 16vh;
+}
+.container__form div:nth-child(2) div.inputBlock:nth-child(2) input {
   height: 15vh;
 }
 .container__form div {
@@ -61,49 +72,49 @@ x.inputBlock {
 .container__btn {
   display: flex;
   justify-content: center;
+  margin: 1.5vh 0;
 }
 .container__btn button {
   transform: scale(1.2);
-  margin: 3vh 0 8vh 0;
 }
 @media (max-width: 1000px) {
-  .container__form div:nth-child(1) x.inputBlock,
-  .container__form div:nth-child(2) x.inputBlock,
+  .container__form div:nth-child(2) div.inputBlock:nth-child(1),
+  .container__form div:nth-child(2) div.inputBlock:nth-child(1) input {
+    width: 90%;
+  }
+  .container__form div:nth-child(1) div.inputBlock,
+  .container__form div:nth-child(2) div.inputBlock,
   .container__btn {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 90%;
   }
-  .container__form div:nth-child(2) x.inputBlock {
-    margin-bottom: 10vh;
-    width: 80%;
+  .container__form div:nth-child(2) div.inputBlock {
+    width: 90%;
   }
   .container__form div {
     align-items: center;
     width: 100%;
   }
   .container__form input {
-    width: 80%;
+    width: 90%;
     padding: 10px;
+    margin: 0.5vh 0;
   }
   .container__form div:nth-child(1) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container__btn button {
-    margin: 2vh 0 4vh 0;
-  }
 
-  .container__form div:nth-child(2) x.inputBlock {
-    margin-bottom: 3.5vh;
-  }
   .container__form div {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* margin: 0 auto; */
+  }
+  .container__form div:nth-child(2) div.inputBlock:nth-child(2) {
+    height: 18vh;
   }
 }
 
@@ -120,5 +131,10 @@ x.inputBlock {
   .container__btn button {
     transform: scale(1);
     padding: 10px 15px;
+  }
+}
+@media (max-width: 300px) {
+  .container__form {
+    width: 70%;
   }
 }

@@ -12,25 +12,29 @@ const ProfessionalSkills = () => {
     <div className={s.wrapper}>
       <div className={s.container}>
         <span className={s.title}>
-          <TextBlockTitle title="Professional Skills" />
+          <TextBlockTitle
+            key={`TextBlockTitleHeader`}
+            title="Professional Skills"
+          />
         </span>
 
         <div className={s.skills}>
           {skills.map((skill, idx) => {
             return (
-              <>
+              <div key={`TextBlock-${idx}`}>
                 <TextBlockTitle
+                  key={`TextBlockTitle-${idx}`}
                   id={idx}
                   title={`${skill.name}  ${skill.value}%`}
                 />
                 <div
+                  key={`ProfessionalSkillsValue-${idx}`}
                   className={s.scale}
                   style={{
                     background: `linear-gradient(90deg,#10c9c3 ${skill.value}%,#d8d8d8 ${skill.value}%,#d8d8d8 100%,#10c9c3 100%)`
                   }}
                 ></div>
-                
-              </>
+              </div>
             );
           })}
         </div>

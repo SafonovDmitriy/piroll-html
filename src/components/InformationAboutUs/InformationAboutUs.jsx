@@ -14,12 +14,15 @@ const InformationAboutUs = () => {
   ];
   return (
     <div className={s.container}>
-      {infoItem.map(item => (
-        <div className={s.infoItem}>
-          <img src={item.image} alt="" />
+      {infoItem.map((item, idx) => (
+        <div key={`infoItem-${idx}`} className={s.infoItem}>
+          <img key={`infoItemImg-${idx}`} src={item.image} alt="" />
           <span className={s.inform}>
-            <TextBlockTitle title={item.count} />
-            <TextBlockTitle title={item.inform} />
+            <TextBlockTitle key={`infoItemTitle-${idx}`} title={item.count} />
+            <TextBlockTitle
+              key={`infoItemSubtitle-${idx}`}
+              title={item.inform}
+            />
           </span>
         </div>
       ))}

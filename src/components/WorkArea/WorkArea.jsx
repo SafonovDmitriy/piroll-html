@@ -57,12 +57,18 @@ const WorkArea = () => {
   ];
   return (
     <div className={s.container}>
-      {workArea.map(workItem => {
+      {workArea.map((workItem, idx) => {
         return (
-          <div className={s.contaner__workItem}>
-            <img src={workItem.img} alt="" />
-            <TextBlockTitle title={workItem.title} />
-            <TextBlockSubtitle subtitle={workItem.subtitle} />
+          <div key={`WorkArea-${idx}`} className={s.contaner__workItem}>
+            <img key={`WorkAreaImg-${idx}`} src={workItem.img} alt="" />
+            <TextBlockTitle
+              key={`WorkAreaTitle-${idx}`}
+              title={workItem.title}
+            />
+            <TextBlockSubtitle
+              key={`WorkAreaSubtitle-${idx}`}
+              subtitle={workItem.subtitle}
+            />
           </div>
         );
       })}

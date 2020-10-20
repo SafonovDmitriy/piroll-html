@@ -9,7 +9,7 @@ import CustomButton from "../../elements/utils/CustomButton/CustomButton";
 
 const showInput = (form, setForm, key) => {
   return (
-    <x className={s.inputBlock}>
+    <div className={s.inputBlock}>
       <FormInput
         name={[key]}
         value={form[key]}
@@ -18,7 +18,7 @@ const showInput = (form, setForm, key) => {
         form={form}
       />
       {form[key].err && <label>{form[key].err}</label>}
-    </x>
+    </div>
   );
 };
 

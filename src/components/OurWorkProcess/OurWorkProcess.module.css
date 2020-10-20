@@ -18,6 +18,7 @@
   line-height: 60px;
   margin-bottom: 0;
 }
+
 .box__subtitle p {
   font-family: "Nunito Sans";
   font-size: 16px;
@@ -26,7 +27,7 @@
 .container__video {
   display: flex;
   justify-content: center;
-  
+
   height: 60vh;
 }
 
@@ -37,13 +38,15 @@
 @media (max-width: 1000px) {
   .workItem {
     flex-basis: 50%;
-   
+  }
+  .box__subtitle {
+    width: 80%;
   }
   .container__video iframe {
     flex-basis: 60%;
     height: 40vh;
   }
-  .container__video{
+  .container__video {
     height: 40vh;
   }
 }
@@ -54,11 +57,17 @@
   .container__box {
     width: 100%;
   }
-  .container__video{
+  .container__video {
     height: 25vh;
   }
   .container__video iframe {
     flex-basis: 40%;
     height: 25vh;
+  }
+}
+@media (max-width: 300px) {
+  .box__title h3,
+  .box__subtitle p {
+    text-align: center;
   }
 }

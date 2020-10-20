@@ -18,11 +18,16 @@
 }
 
 @media (max-width: 1000px) {
-  .container{
+  .container {
     justify-content: center;
   }
   .container div {
     flex-basis: 60%;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    text-align: center;
   }
 }
 @media (max-width: 500px) {
