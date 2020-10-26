@@ -9,6 +9,15 @@
   justify-content: center;
   align-items: center;
 }
+.workItem:nth-child(3n + 0) {
+  background-color: green;
+}
+.workItem:nth-child(3n + 1) {
+  background-color: gray;
+}
+.workItem:nth-child(3n + 2) {
+  background-color: black;
+}
 .workItem__look {
   height: 100%;
   flex-basis: 25vw;

@@ -29,10 +29,9 @@ const NeedAProject = () => {
     title: { title: "", err: undefined },
     comment: { title: "", err: undefined }
   });
-  console.log(form);
+
   const getForm = () => {
-    console.clear();
-    console.log(form);
+    
   };
   return (
     <div className={s.container}>

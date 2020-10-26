@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
-        <div>
+        <Header style={{ minHeight: "5vh" }} />
+        <div style={{ minHeight: "70vh" }}>
           <Route exact path={`/`} render={() => <Redirect to="/Home" />} />
           <Route exact path={`/Home/`} render={() => <HomePage />} />
         </div>

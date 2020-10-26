@@ -1,7 +1,7 @@
 import React from "react";
 const FormInput = props => {
   const testLocalError = (localError, names, text, form, err) => {
-    console.log(form);
+   
     if (localError) {
       props.setForm({ ...form, [names]: { ...form[names], err: err } });
     } else {
