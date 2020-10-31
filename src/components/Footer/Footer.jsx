@@ -2,13 +2,13 @@ import React from "react";
 import s from "./Footer.module.css";
 import {
   TextBlockTitle,
-  TextBlockSubtitle
+  TextBlockSubtitle,
 } from "../../elements/TextBlock/TextBlock";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className={s.footer}>
+    <footer className={s.footer}>
       <div className={s.container}>
         <div className={s.container__designed}>
           <TextBlockTitle title="Piroll Design, Inc." />
@@ -64,7 +64,7 @@ const Footer = () => {
           </nav>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

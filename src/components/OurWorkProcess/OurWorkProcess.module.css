@@ -9,6 +9,7 @@
 .container__box {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 35%;
 }
@@ -36,6 +37,9 @@
   margin: 5vh 0;
 }
 @media (max-width: 1000px) {
+  .container__box {
+    width: 100%;
+  }
   .workItem {
     flex-basis: 50%;
   }
@@ -54,9 +58,7 @@
   .container {
     align-items: flex-start;
   }
-  .container__box {
-    width: 100%;
-  }
+
   .container__video {
     height: 25vh;
   }

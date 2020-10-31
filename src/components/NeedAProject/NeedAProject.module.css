@@ -1,140 +1,98 @@
 .container {
-  display: flex;
-  background-color: #f5f5f5;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2vh 0;
+  display: grid;
+  grid-row-gap: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 1em;
 }
 .container__header {
-  justify-content: flex-start;
-  align-items: center;
   text-align: center;
-  flex-direction: column;
-  width: 35%;
+  width: 30%;
 }
 .container__form {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-
-  flex-wrap: wrap;
-}
-div.inputBlock {
   display: grid;
-  margin-bottom: 10px;
+  grid-gap: 1em;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  padding: 25px 0;
+}
+.form__firstBlock,
+.form__secondBlock {
+  width: 75%;
+}
+.form__firstBlock {
+  display: grid;
+  grid-column-gap: 0.5em;
+  grid-template-areas: "a a";
+  grid-template-rows: 6vh;
+}
+.form__secondBlock {
+  display: grid;
+  grid-row-gap: 0.5em;
+}
+.form__secondBlock {
+  grid-template-rows: 6vh 18vh;
+}
+.form__secondBlock .inputBlock {
+  display: grid;
+}
+.form__firstBlock .inputBlock {
+  display: grid;
+  grid-template-areas: "a" "a";
 }
 
-.container__form div:nth-child(1) div {
-  flex-basis: 40%;
-}
-.container__form div:nth-child(1) div input {
-  flex-basis: 100%;
-}
-.container__form div:nth-child(2) div.inputBlock {
-  width: 100%;
-}
-
-.container__form div:nth-child(2) div.inputBlock:nth-child(1),
-.container__form div:nth-child(2) div.inputBlock:nth-child(1) input,
-.container__form div:nth-child(1) input {
-  min-height: 5vh;
-}
-.container__form div:nth-child(2) div.inputBlock:nth-child(1),
-.container__form div:nth-child(2) div.inputBlock:nth-child(1) input {
-  width: 100%;
-}
-.container__form div:nth-child(2) div.inputBlock:nth-child(2) {
-  height: 16vh;
-}
-.container__form div:nth-child(2) div.inputBlock:nth-child(2) input {
-  height: 15vh;
-}
-.container__form div {
-  display: flex;
-}
-.container__form div:nth-child(1) {
-  justify-content: space-between;
-}
-
-.container__form div:nth-child(2) {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.container__form div input {
-  text-align: left;
+.inputBlock input {
   font-family: "Nunito Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
 }
-.container__btn {
-  display: flex;
-  justify-content: center;
-  margin: 1.5vh 0;
+.form__btn {
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
-.container__btn button {
+.form__btn button {
   transform: scale(1.2);
 }
-@media (max-width: 1000px) {
-  .container__form div:nth-child(2) div.inputBlock:nth-child(1),
-  .container__form div:nth-child(2) div.inputBlock:nth-child(1) input {
-    width: 90%;
-  }
-  .container__form div:nth-child(1) div.inputBlock,
-  .container__form div:nth-child(2) div.inputBlock,
-  .container__btn {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-  }
-  .container__form div:nth-child(2) div.inputBlock {
-    width: 90%;
-  }
-  .container__form div {
-    align-items: center;
-    width: 100%;
-  }
-  .container__form input {
-    width: 90%;
-    padding: 10px;
-    margin: 0.5vh 0;
-  }
-  .container__form div:nth-child(1) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .container__form div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .container__form div:nth-child(2) div.inputBlock:nth-child(2) {
-    height: 18vh;
+@media (max-width: 1124px) {
+  .form__firstBlock {
+    grid-template-areas: "a" "a";
+    grid-row-gap: 5px;
   }
 }
 
+@media (max-width: 800px) {
+  .form__firstBlock,
+  .form__secondBlock {
+    width: 85%;
+  }
+}
 @media (max-width: 500px) {
-  .container__header {
-    width: 70%;
-  }
-  .container__form {
-    width: 80%;
-  }
-  .container__form input {
-    padding: 5px;
-  }
-  .container__btn button {
-    transform: scale(1);
-    padding: 10px 15px;
+  .form__firstBlock,
+  .form__secondBlock {
+    width: 90%;
   }
 }
 @media (max-width: 300px) {
-  .container__form {
-    width: 70%;
+  .container {
+    width: 100%;
+
+    justify-items: stretch;
+    grid-gap: 0em;
+  }
+  .container__header {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 250px) {
+  .container {
+    width: 60%;
+  }
+  .container__header {
+    width: 50%;
   }
 }

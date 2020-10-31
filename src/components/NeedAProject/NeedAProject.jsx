@@ -17,7 +17,7 @@ const showInput = (form, setForm, key) => {
         setForm={setForm}
         form={form}
       />
-      {form[key].err && <label>{form[key].err}</label>}
+      {form[key].err && <span>{form[key].err}</span>}
     </div>
   );
 };
@@ -30,9 +30,7 @@ const NeedAProject = () => {
     comment: { title: "", err: undefined }
   });
 
-  const getForm = () => {
-    
-  };
+  const getForm = () => {};
   return (
     <div className={s.container}>
       <div className={s.container__header}>
@@ -40,15 +38,15 @@ const NeedAProject = () => {
         <TextBlockSubtitle subtitle="Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful." />
       </div>
       <div className={s.container__form}>
-        <div>
+        <div className={s.form__firstBlock}>
           {showInput(form, setForm, "name")}
           {showInput(form, setForm, "email")}
         </div>
-        <div>
+        <div className={s.form__secondBlock}>
           {showInput(form, setForm, "title")}
           {showInput(form, setForm, "comment")}
         </div>
-        <div className={s.container__btn}>
+        <div className={s.form__btn}>
           <CustomButton onClick={getForm} value="send message" />
         </div>
       </div>

@@ -1,18 +1,24 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/Home/Home";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header style={{ minHeight: "5vh" }} />
-        <div style={{ minHeight: "70vh" }}>
+        <Header />
+        <div className="content">
           <Route exact path={`/`} render={() => <Redirect to="/Home" />} />
           <Route exact path={`/Home/`} render={() => <HomePage />} />
+          <Route exact path={`/About/`} render={() => <div />} />
+          <Route exact path={`/Work/`} render={() => <div />} />
+          <Route exact path={`/Process/`} render={() => <div />} />
+          <Route exact path={`/Services/`} render={() => <div />} />
+          <Route exact path={`/Testimonials/`} render={() => <div />} />
+          <Route exact path={`/Contacts/`} render={() => <div />} />
         </div>
         <Footer />
       </div>
